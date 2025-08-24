@@ -157,4 +157,3 @@ export function toString(text, { dark = '##', light = '  ' } = {}) {
 }
 
 export default { generate, toString };
-
