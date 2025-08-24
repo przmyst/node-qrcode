@@ -118,6 +118,44 @@ If you install through `npm`, precompiled files will be available in `node_modul
 
 The precompiled bundle have support for [Internet Explorer 10+, Safari 5.1+, and all evergreen browsers](https://browserl.ist/?q=defaults%2C+IE+%3E%3D+10%2C+Safari+%3E%3D+5.1).
 
+### React component
+
+This library includes a tiny React wrapper located at `qrcode/lib/react`.
+It renders the QR code inside a `<canvas>` element and forwards all
+options supported by the core renderer.
+
+```jsx
+import QRCode from 'qrcode/lib/react'
+
+export default function Example () {
+  return (
+    <QRCode
+      value='Hello world'
+      options={{
+        gradient: {
+          type: 'linear',
+          rotation: 45,
+          colorStops: [
+            { offset: 0, color: '#ff0080' },
+            { offset: 1, color: '#00f0ff' }
+          ]
+        },
+        image: document.getElementById('logo')
+      }}
+    />
+  )
+}
+```
+
+#### Gradient and center image
+
+The canvas renderer now accepts a `gradient` option to draw modules with a
+linear or radial gradient and an `image` option to place a custom image in
+the middle of the code. The `image` option should be any `CanvasImageSource`
+such as an `HTMLImageElement`, while `gradient` specifies the gradient
+type, rotation and color stops. Optional `imageSize`, `imageWidth` and
+`imageHeight` may be provided to control the overlay dimensions.
+
 ### NodeJS
 Require the module `qrcode`
 
