@@ -1,44 +1,11 @@
 {
-  "name": "qrcode",
-  "description": "QRCode generator for browsers using ES modules",
-  "version": "1.5.4",
-  "author": "Ryan Day <soldair@gmail.com>",
-  "contributors": [
-    "Vincenzo Greco <greco.vincenzo@gmail.com>",
-    "Linus Unnebäck <linus@folkdatorn.se>"
-  ],
-  "keywords": [
-    "qr",
-    "code",
-    "canvas",
-    "qrcode"
-  ],
+  "name": "standalone-qrcode",
+  "version": "0.1.0",
+  "description": "Minimal standalone QR code generator",
+  "main": "index.js",
   "type": "module",
-  "main": "./lib/index.js",
-  "files": [
-    "lib"
-  ],
-  "homepage": "http://github.com/soldair/node-qrcode",
-  "license": "MIT",
+  "files": ["index.js"],
   "scripts": {
-    "test": "node test/basic.test.mjs"
-  },
-  "dependencies": {
-    "dijkstrajs": "^1.0.1"
-  },
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/soldair/node-qrcode.git"
-  },
-  "engines": {
-    "node": ">=10.13.0"
-  },
-  "standard": {
-    "ignore": [
-      "build/",
-      "examples/vendors/",
-      "lib/core/regex.js"
-    ]
+    "test": "node --test"
   }
 }
